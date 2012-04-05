@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Backbone.js Web App</title>
+    <link rel="stylesheet" href="css/screen.css">
+</head>
+<body>
+<div id="books">
+    <form id="addBook" action="#">
+        <div>
+            <label for="coverImage">CoverImage: </label><input id="coverImage" type="file">
+            <label for="title">Title: </label><input id="title">
+            <label for="author">Author: </label><input id="author">
+            <label for="releaseDate">Release date: </label><input id="releaseDate">
+            <label for="keywords">Keywords: </label><input id="keywords">
+            <button id="add">Add</button>
+        </div>
+    </form>
+</div>
+<script id="bookTemplate" type="text/template">
+    <img src="<%= coverImage %>"/>
+    <ul>
+        <li><%= title%></li>
+        <li><%= author%></li>
+        <li><%= releaseDate%></li>
+        <li><%= keywords%></li>
+    </ul>
+    <button class="delete">Delete</button>
+</script>
+<script src="js/jquery-1.7.1.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/backbone.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
